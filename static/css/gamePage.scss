@@ -1,0 +1,34 @@
+html{
+    background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%);
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.nave {
+    width: 200px;
+    height: 200px;
+    z-index: 10000;
+    background-image: url(../img/nave1.gif);
+    background-size: 100%;
+    position: absolute;
+}
+
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+@import 'sass/stars';
