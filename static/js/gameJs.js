@@ -8,6 +8,7 @@ var inimigosTotal;
 var vidaPlaneta, barraPlaneta;
 var telaWin = document.querySelector(".victoryScreenBg");
 var telaLoose = document.querySelector(".looseScreenBg");
+var numInvasores = document.querySelector(".numInvasores")
 
 function teclaDw() {
     var tecla = event.keyCode;
@@ -50,7 +51,11 @@ function criaInimigo() {
         inimigo.setAttributeNode(att1);
         inimigo.setAttributeNode(att2);
         document.body.appendChild(inimigo);
+
         contInimigos--;
+
+        numInvasores.innerHTML = contInimigos
+
     }
 }
 
@@ -63,7 +68,7 @@ function controlaInimigo() {
             pi += velI;
             inimigosTotal[i].style.top =  pi + "px";
             if (pi > tamTelaH) {
-                vidaPlaneta-=10;
+                vidaPlaneta-=localStorage.danoInimigos;
                 inimigosTotal[i].remove();
             }
         }
@@ -164,20 +169,20 @@ function controlaInimigo() {
             dirxJ = diryJ = 0;
             pjx = tamTelaW / 2;
             pjy = tamTelaH / 2;
-            velJ = 15;
-            velT = 10;
+            velJ = localStorage.velocidadeJogador;
+            velT = localStorage.velocidadeTiro;
             jog = document.querySelector(".nave");
             jog.style.top = pjy + "px";
             jog.style.left = pjx + "px";
 
             //Controle dos Inimigos
             clearInterval(tmpCriaInimigo);
-            contInimigos = 100;
+            contInimigos = localStorage.quantidadeInimigos;
             velI = 5;
-            tmpCriaInimigo = setInterval(criaInimigo, 1700);
+            tmpCriaInimigo = setInterval(criaInimigo, localStorage.tempoGeracaoInimigos);
 
             //Controles Planeta
-            vidaPlaneta = 100;
+            vidaPlaneta = localStorage.vidaPlaneta;
             barraPlaneta = document.querySelector(".vidaPlaneta");
             barraPlaneta.style.width = vidaPlaneta + "px";
 
@@ -187,3 +192,5 @@ function controlaInimigo() {
         window.addEventListener("load", inicia);
         document.addEventListener("keydown", teclaDw);
         document.addEventListener("keyup", teclaUp);
+
+        console.log(localStorage.velocidadeInimigos)

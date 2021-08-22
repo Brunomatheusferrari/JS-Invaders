@@ -124,7 +124,7 @@ overflow: hidden;
     font-weight: 400;
     font-size: 25px;
     text-decoration: none;
-    padding: 15px 30px 5px 30px;
+    padding: 15px 40px 5px 40px;
     margin: 0 15px;
     transition: 0.5s;
     color: #ffffff;
@@ -238,12 +238,84 @@ overflow: hidden;
          
         } 
 
+.ver {
+    color: rgba(255, 255, 255, 0.253);
+    margin-left: 30px;
+    font-family: pixellari;
+    font-size: 30px;
+}
+
 .centerTitle {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 90vh;
+}
+
+.bgModalConfig {
+    position: absolute;
+    background-color: #0f111b;
+    width: 400px;
+    height: 600px;
+    z-index: 100000;
+    border-radius: 30px;
+    display: none;
+    flex-direction: column;
+    -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.inputsTitles {
+    color: white;
+    font-family: pixellari;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.modalConfigTitle{
+    font-family: pixellari;
+    color: white;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 28px;
+}
+
+.closeButtonConfig {
+    color: white;
+    font-family: pixellari;
+    position: absolute;
+    font-size: 25px;
+    right: 30px;
+    top: 20px;
+    text-decoration: none;
+}
+
+input {
+    background-color: rgb(75, 75, 75);
+    border: none;
+    color: white;
+    height: 30px;
+    width: 180px;
+    margin-left: 30px;
+    font-family: pixellari;
+    padding-left: 10px;
+}
+
+
+.saveButton {
+    text-decoration: none;
+    font-family: pixellari;
+    padding: 10px 30px 10px 30px;
+    background-color: #e9ff21;
+    color: #000000;
+    display: inline;
+    width: 40px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    
 }
 
 #bgModalAbout {

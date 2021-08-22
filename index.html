@@ -20,10 +20,31 @@
             </div>
             <div class="buttons">
                 <a href="paginaJogo.html" class="button1">PLAY</a>
-                <a href="#" class="button2">ROCKETS</a>
+                <a href="#" class="button2">CONFIG</a>
                 <a href="#" class="button3">ABOUT</a>
             </div>
         </div>
+
+        <div class="bgModalConfig">
+        <a href="#" class="closeButtonConfig">X</a>
+        <h2 class="modalConfigTitle">Config</h2>
+        <p class="inputsTitles">Qunatidade de Inimigos:</p>
+            <input type="number" class="quantInimigos" value="100">
+        <p class="inputsTitles">Dano Inimigos:</p>
+            <input type="number" class="danoInimigos" value="10">
+        <p class="inputsTitles">Tempo de Geração de Inimigos:</p>
+            <input type="number" class="velInimigos" value="1700">
+        <p class="inputsTitles">Vida Planeta:</p>
+            <input type="number" class="vidaPlaneta" value="100">
+        <p class="inputsTitles">Velocidade Jogador:</p>
+            <input type="number" class="velJogador" value="15">
+        <p class="inputsTitles">Velocidade Tiro:</p>
+            <input type="number" class="velTiro" value="10">
+        <a href="#" class="saveButton">Save</a>
+        
+        
+        </div>
+
         <div id="bgModalAbout">
             <a href="#" class="closeButton">X</a>
             <p class="textAboutModal">A game inspired by Space Invaders, made with the aim of training and practicing Javascript programming.</p>
@@ -32,6 +53,7 @@
     
     </div>
 
+    <p class="ver">0.0.1</p>
    
     <section class="wrapper">
         <div id="stars"></div>
@@ -46,5 +68,6 @@
     <!-- <audio autoplay src="static/img/AdhesiveWombat - Night Shade ♫ NO COPYRIGHT 8-bit Music.mp3"></audio> -->
     
     <script type="module" src="./static/js/buttons.js"></script>
+    <script type="module" src="./static/js/localStorageGen.js"></script>
 </body>
 </html>
