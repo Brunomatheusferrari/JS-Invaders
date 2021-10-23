@@ -68,7 +68,7 @@ function controlaInimigo() {
             pi += velI;
             inimigosTotal[i].style.top =  pi + "px";
             if (pi > tamTelaH) {
-                vidaPlaneta-=localStorage.danoInimigos;
+                vidaPlaneta-=localStorage.danoInimigos || 10;
                 inimigosTotal[i].remove();
             }
         }
@@ -169,20 +169,20 @@ function controlaInimigo() {
             dirxJ = diryJ = 0;
             pjx = tamTelaW / 2;
             pjy = tamTelaH / 2;
-            velJ = localStorage.velocidadeJogador;
-            velT = localStorage.velocidadeTiro;
+            velJ = localStorage.velocidadeJogador || 15;
+            velT = localStorage.velocidadeTiro || 10;
             jog = document.querySelector(".nave");
             jog.style.top = pjy + "px";
             jog.style.left = pjx + "px";
 
             //Controle dos Inimigos
             clearInterval(tmpCriaInimigo);
-            contInimigos = localStorage.quantidadeInimigos;
+            contInimigos = localStorage.quantidadeInimigos || 100;
             velI = 5;
-            tmpCriaInimigo = setInterval(criaInimigo, localStorage.tempoGeracaoInimigos);
+            tmpCriaInimigo = setInterval(criaInimigo, 1700);
 
             //Controles Planeta
-            vidaPlaneta = localStorage.vidaPlaneta;
+            vidaPlaneta = localStorage.vidaPlaneta || 100;
             barraPlaneta = document.querySelector(".vidaPlaneta");
             barraPlaneta.style.width = vidaPlaneta + "px";
 
